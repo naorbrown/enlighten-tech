@@ -30,18 +30,15 @@
             background-color: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 40px;
         }
 
-        /* Navigation Bar */
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -51,7 +48,7 @@
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
             z-index: 1000;
-            padding: 16px 0;
+            padding: 20px 0;
         }
 
         nav .container {
@@ -63,14 +60,13 @@
         .logo {
             font-size: 1.1rem;
             font-weight: 600;
-            letter-spacing: -0.02em;
             color: var(--text-primary);
             text-decoration: none;
         }
 
         .nav-links {
             display: flex;
-            gap: 32px;
+            gap: 40px;
             align-items: center;
         }
 
@@ -85,200 +81,176 @@
             color: var(--text-primary);
         }
 
-        .nav-links .contact-btn {
+        .nav-links .cta-btn {
             background-color: var(--accent);
             color: #0f0f0e;
-            padding: 8px 20px;
+            padding: 10px 24px;
             border-radius: 6px;
             font-weight: 500;
-            transition: background-color 0.2s ease;
         }
 
-        .nav-links .contact-btn:hover {
+        .nav-links .cta-btn:hover {
             background-color: var(--accent-hover);
             color: #0f0f0e;
         }
 
-        /* Main Content */
-        main {
-            flex: 1;
-            padding: 120px 0 60px;
-        }
-
+        /* Hero */
         .hero {
-            margin-bottom: 64px;
+            padding: 160px 0 100px;
+            border-bottom: 1px solid var(--border);
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 600;
             letter-spacing: -0.03em;
             line-height: 1.1;
             margin-bottom: 24px;
-            color: var(--text-primary);
+            max-width: 700px;
         }
 
-        .hero .tagline {
-            font-size: 1.2rem;
+        .hero p {
+            font-size: 1.15rem;
             color: var(--text-secondary);
-            max-width: 620px;
+            max-width: 540px;
+            margin-bottom: 32px;
+        }
+
+        .hero .cta-btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #0f0f0e;
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .hero .cta-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Section styling */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 80px;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            margin-bottom: 32px;
+        }
+
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .about-content p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
             line-height: 1.7;
         }
 
         /* Services */
-        .services {
-            margin-bottom: 64px;
-            scroll-margin-top: 80px;
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
         }
 
-        .services h2 {
-            font-size: 0.85rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent);
-            margin-bottom: 24px;
-        }
-
-        .services-list {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .service-item {
-            padding: 28px;
+        .service-card {
+            padding: 32px;
             background-color: var(--bg-secondary);
             border: 1px solid var(--border);
             border-radius: 10px;
-            transition: border-color 0.2s ease;
         }
 
-        .service-item:hover {
-            border-color: #3d3930;
-        }
-
-        .service-item h3 {
-            font-size: 1.15rem;
+        .service-card h3 {
+            font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 10px;
-            color: var(--text-primary);
+            margin-bottom: 12px;
         }
 
-        .service-item p {
+        .service-card p {
             font-size: 0.95rem;
             color: var(--text-secondary);
             line-height: 1.6;
         }
 
-        /* Experience */
-        .experience {
-            margin-bottom: 64px;
-            scroll-margin-top: 80px;
-        }
-
-        .experience h2 {
-            font-size: 0.85rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent);
-            margin-bottom: 24px;
-        }
-
-        .companies-grid {
+        /* Approach */
+        .approach-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-        }
-
-        .company-item {
-            padding: 18px;
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-        }
-
-        .company-item .company-name {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--text-primary);
-            margin-bottom: 6px;
-        }
-
-        .company-item .tech-built {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            line-height: 1.4;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 64px 0;
-            border-top: 1px solid var(--border);
-            scroll-margin-top: 80px;
-        }
-
-        .contact-section h2 {
-            font-size: 1.75rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: var(--text-primary);
-        }
-
-        .contact-section > p {
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-            font-size: 1.05rem;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
+            grid-template-columns: 1fr 1fr;
             gap: 48px;
         }
 
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
+        .approach-item h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
 
-        .contact-info-item {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-        }
-
-        .contact-info-item .icon {
-            width: 20px;
-            height: 20px;
-            color: var(--accent);
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .contact-info-item .label {
-            font-size: 0.85rem;
+        .approach-item p {
+            font-size: 0.95rem;
             color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .contact-info p {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .contact-detail {
+            margin-bottom: 20px;
+        }
+
+        .contact-detail .label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
             margin-bottom: 4px;
         }
 
-        .contact-info-item .value {
-            color: var(--text-primary);
-            font-size: 0.95rem;
-        }
-
-        .contact-info-item a {
+        .contact-detail a {
             color: var(--accent);
             text-decoration: none;
         }
 
-        .contact-info-item a:hover {
+        .contact-detail a:hover {
             text-decoration: underline;
         }
 
-        /* Contact Form */
+        /* Form */
         .contact-form {
             display: flex;
             flex-direction: column;
@@ -288,7 +260,7 @@
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            gap: 20px;
         }
 
         .form-group {
@@ -307,11 +279,10 @@
             background-color: var(--bg-secondary);
             border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 12px 16px;
+            padding: 14px 16px;
             color: var(--text-primary);
             font-size: 0.95rem;
             font-family: inherit;
-            transition: border-color 0.2s ease;
         }
 
         .form-group input:focus,
@@ -334,7 +305,6 @@
             font-size: 1rem;
             font-weight: 500;
             cursor: pointer;
-            transition: background-color 0.2s ease;
             align-self: flex-start;
         }
 
@@ -344,61 +314,51 @@
 
         /* Footer */
         footer {
-            padding: 24px 0;
-            border-top: 1px solid var(--border);
+            padding: 32px 0;
         }
 
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .copyright {
+        footer p {
             font-size: 0.8rem;
             color: var(--text-secondary);
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                gap: 20px;
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: 1fr;
             }
 
-            .nav-links a:not(.contact-btn) {
+            .about-content,
+            .approach-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 24px;
+            }
+
+            .nav-links a:not(.cta-btn) {
                 display: none;
             }
 
-            main {
-                padding: 100px 0 40px;
+            .hero {
+                padding: 120px 0 60px;
             }
 
             .hero h1 {
                 font-size: 2.2rem;
             }
 
-            .hero .tagline {
-                font-size: 1.05rem;
-            }
-
-            .companies-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
+            section {
+                padding: 60px 0;
             }
 
             .form-row {
                 grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                align-items: flex-start;
             }
         }
     </style>
@@ -408,126 +368,119 @@
         <div class="container">
             <a href="#" class="logo">Enlighten Technologies</a>
             <div class="nav-links">
+                <a href="#about">About</a>
                 <a href="#services">Services</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact" class="contact-btn">Contact</a>
+                <a href="#approach">Approach</a>
+                <a href="#contact" class="cta-btn">Get Started</a>
             </div>
         </div>
     </nav>
 
-    <main>
+    <section class="hero">
         <div class="container">
-            <section class="hero">
-                <h1>We build AI and data products. From prototype to scale.</h1>
-                <p class="tagline">15 years shipping frontier tech at Meta, Apple, Microsoft, and high-growth startups. Now we build yours—with a senior product lead and a full engineering team ready to deploy.</p>
-            </section>
-
-            <section id="services" class="services">
-                <h2>Services</h2>
-                <div class="services-list">
-                    <div class="service-item">
-                        <h3>AI/Data Product Development</h3>
-                        <p>End-to-end build of your AI or data-intensive product. We take you from idea to production-ready software—architecture, ML pipelines, backend, frontend, and deployment. Scalable engineering team that grows with your needs.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3>Rapid Prototyping & Validation</h3>
-                        <p>Working prototype in 2-4 weeks. We use AI-native development to build fast, test assumptions, and give you something real to show investors or users. Perfect before committing to a full build.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3>Fractional CPO / Product Advisory</h3>
-                        <p>Senior product leadership on a part-time basis. I work directly with your team on strategy, roadmap, hiring, and execution. Ideal for startups that need experienced guidance without a full-time executive.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="experience" class="experience">
-                <h2>Experience</h2>
-                <div class="companies-grid">
-                    <div class="company-item">
-                        <p class="company-name">Meta (CTRL-labs)</p>
-                        <p class="tech-built">Neural interface wristband</p>
-                    </div>
-                    <div class="company-item">
-                        <p class="company-name">Microsoft</p>
-                        <p class="tech-built">Kinect & Xbox body tracking</p>
-                    </div>
-                    <div class="company-item">
-                        <p class="company-name">Shield AI</p>
-                        <p class="tech-built">Autonomous drone systems</p>
-                    </div>
-                    <div class="company-item">
-                        <p class="company-name">Skillz</p>
-                        <p class="tech-built">Mobile gaming ($20B+ valuation)</p>
-                    </div>
-                    <div class="company-item">
-                        <p class="company-name">Statespace</p>
-                        <p class="tech-built">Aimlabs cognitive training</p>
-                    </div>
-                    <div class="company-item">
-                        <p class="company-name">Leap Motion</p>
-                        <p class="tech-built">Hand tracking for AR/VR</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact" class="contact-section">
-                <h2>Let's talk about your project.</h2>
-                <p>We take on a limited number of engagements. If you're building something ambitious, reach out.</p>
-
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <div class="contact-info-item">
-                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                            </svg>
-                            <div>
-                                <p class="label">Email</p>
-                                <a href="mailto:naorbrown@gmail.com" class="value">naorbrown@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                            </svg>
-                            <div>
-                                <p class="label">Location</p>
-                                <p class="value">Tel Aviv & Remote</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Your Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">How can we help?</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
-            </section>
+            <h1>AI products built right. From prototype to scale.</h1>
+            <p>Senior product leadership and a full engineering team for startups building with AI.</p>
+            <a href="#contact" class="cta-btn">Get Started</a>
         </div>
-    </main>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <p class="section-label">About</p>
+            <div class="about-content">
+                <h2>We partner with founders to build AI and data products that ship.</h2>
+                <p>15 years building at the intersection of AI, hardware, and consumer products. Neural interfaces, computer vision, autonomous systems. Now focused on helping startups move faster with senior guidance and hands-on engineering.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <p class="section-label">Services</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Product Development</h3>
+                    <p>End-to-end build of your AI product. Architecture, ML pipelines, backend, frontend, deployment.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Rapid Prototyping</h3>
+                    <p>Working prototype in 2-4 weeks. Test assumptions before committing to a full build.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fractional CPO</h3>
+                    <p>Senior product leadership on a part-time basis. Strategy, roadmap, hiring, execution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="approach">
+        <div class="container">
+            <p class="section-label">Approach</p>
+            <div class="approach-grid">
+                <div class="approach-item">
+                    <h3>Ship fast, iterate</h3>
+                    <p>AI-native development means we build quickly. You get working software, not slide decks.</p>
+                </div>
+                <div class="approach-item">
+                    <h3>Senior from day one</h3>
+                    <p>No junior handoffs. Direct access to experienced builders who've shipped at scale.</p>
+                </div>
+                <div class="approach-item">
+                    <h3>Flexible engagement</h3>
+                    <p>Scale up or down based on your needs. No long-term contracts required.</p>
+                </div>
+                <div class="approach-item">
+                    <h3>Your team, extended</h3>
+                    <p>We integrate with your existing workflow. Slack, GitHub, whatever you use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Let's build something.</h2>
+                    <p>Limited availability. Reach out to discuss your project.</p>
+                    <div class="contact-detail">
+                        <p class="label">Email</p>
+                        <a href="mailto:naorbrown@gmail.com">naorbrown@gmail.com</a>
+                    </div>
+                    <div class="contact-detail">
+                        <p class="label">Location</p>
+                        <p>Tel Aviv & Remote</p>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <p class="copyright">&copy; 2025 Enlighten Technologies. All rights reserved.</p>
-            </div>
+            <p>&copy; 2025 Enlighten Technologies</p>
         </div>
     </footer>
 </body>
