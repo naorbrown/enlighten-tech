@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlighten Technologies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0d0d0d;
+            --bg-secondary: #161616;
+            --text-primary: #e8e8e8;
+            --text-secondary: #a0a0a0;
+            --accent: #4a9eff;
+            --accent-hover: #6bb3ff;
+            --border: #2a2a2a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 40px 0 0;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 60px 0;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .hero .tagline {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 620px;
+            line-height: 1.7;
+        }
+
+        /* Track Record */
+        .track-record {
+            margin-bottom: 48px;
+        }
+
+        .track-record h2 {
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .company-item {
+            padding: 16px;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .company-item .company-name {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .company-item .tech-built {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* Services */
+        .services {
+            margin-bottom: 48px;
+        }
+
+        .services h2 {
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .services-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .service-item {
+            padding: 24px;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: border-color 0.2s ease;
+        }
+
+        .service-item:hover {
+            border-color: #3a3a3a;
+        }
+
+        .service-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .service-item p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .service-item .pricing {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .cta-section h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: var(--accent);
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Footer */
+        footer {
+            padding: 24px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            header {
+                padding: 24px 0 0;
+            }
+
+            main {
+                padding: 40px 0;
+            }
+
+            .hero h1 {
+                font-size: 1.85rem;
+            }
+
+            .hero .tagline {
+                font-size: 1rem;
+            }
+
+            .companies-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Enlighten Technologies</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>We build AI and data products. From prototype to scale.</h1>
+                <p class="tagline">15 years shipping frontier tech at Meta, Apple, Microsoft, and high-growth startups. Now we build yours—with a senior product lead and a full engineering team ready to deploy.</p>
+            </section>
+
+            <section class="track-record">
+                <h2>Track Record</h2>
+                <div class="companies-grid">
+                    <div class="company-item">
+                        <p class="company-name">Meta (CTRL-labs)</p>
+                        <p class="tech-built">Neural interface wristband</p>
+                    </div>
+                    <div class="company-item">
+                        <p class="company-name">Microsoft</p>
+                        <p class="tech-built">Kinect & Xbox body tracking</p>
+                    </div>
+                    <div class="company-item">
+                        <p class="company-name">Shield AI</p>
+                        <p class="tech-built">Autonomous drone systems</p>
+                    </div>
+                    <div class="company-item">
+                        <p class="company-name">Skillz</p>
+                        <p class="tech-built">Mobile gaming ($20B+ valuation)</p>
+                    </div>
+                    <div class="company-item">
+                        <p class="company-name">Statespace</p>
+                        <p class="tech-built">Aimlabs cognitive training</p>
+                    </div>
+                    <div class="company-item">
+                        <p class="company-name">Leap Motion</p>
+                        <p class="tech-built">Hand tracking for AR/VR</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="services">
+                <h2>Services</h2>
+                <div class="services-list">
+                    <div class="service-item">
+                        <h3>AI/Data Product Development</h3>
+                        <p>End-to-end build of your AI or data-intensive product. We take you from idea to production-ready software—architecture, ML pipelines, backend, frontend, and deployment. Scalable engineering team that grows with your needs.</p>
+                        <span class="pricing">Starts at $25K/month · Scales with scope</span>
+                    </div>
+                    <div class="service-item">
+                        <h3>Rapid Prototyping & Validation</h3>
+                        <p>Working prototype in 2-4 weeks. We use AI-native development to build fast, test assumptions, and give you something real to show investors or users. Perfect before committing to a full build.</p>
+                        <span class="pricing">$15K-$40K fixed · Delivered in weeks</span>
+                    </div>
+                    <div class="service-item">
+                        <h3>Fractional CPO / Product Advisory</h3>
+                        <p>Senior product leadership on a part-time basis. I work directly with your team on strategy, roadmap, hiring, and execution. Ideal for startups that need experienced guidance without a full-time executive.</p>
+                        <span class="pricing">$5K-$15K/month · Flexible engagement</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <h2>Let's talk about your project.</h2>
+                <p>We take on a limited number of engagements. If you're building something ambitious, reach out.</p>
+                <a href="mailto:naorbrown@gmail.com" class="cta-button">Get in Touch</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p class="copyright">&copy; 2025 Enlighten Technologies. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="mailto:naorbrown@gmail.com">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
