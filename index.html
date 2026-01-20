@@ -212,42 +212,10 @@
         }
 
         /* Contact */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 80px;
-        }
-
-        .contact-info h2 {
+        #contact h2 {
             font-size: 2rem;
             font-weight: 600;
-            margin-bottom: 24px;
-        }
-
-        .contact-info p {
-            color: var(--text-secondary);
             margin-bottom: 32px;
-        }
-
-        .contact-detail {
-            margin-bottom: 20px;
-        }
-
-        .contact-detail .label {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 4px;
-        }
-
-        .contact-detail a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .contact-detail a:hover {
-            text-decoration: underline;
         }
 
         /* Form */
@@ -329,8 +297,7 @@
             }
 
             .about-content,
-            .approach-grid,
-            .contact-grid {
+            .approach-grid {
                 grid-template-columns: 1fr;
                 gap: 32px;
             }
@@ -440,11 +407,8 @@
 
     <section id="contact">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Let's build something.</h2>
-                </div>
-                <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <h2>Let's build something.</h2>
+            <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -464,8 +428,7 @@
                         <textarea id="message" name="message" required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Send</button>
-                </form>
-            </div>
+            </form>
         </div>
     </section>
 
